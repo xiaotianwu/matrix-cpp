@@ -7,6 +7,6 @@ MAINTAINER Xiaotian Wu
 
 RUN yum install -y git, wget, tar, vim
 RUN rpm -Uvh http://repos.mesosphere.io/el/7/noarch/RPMS/mesosphere-el-repo-7-1.noarch.rpm
-RUN yum install -y automake, autoconf, m4, libtool, make
+RUN yum install -y automake, autoconf, m4, libtool, make, gcc, gcc-c++
 
 ADD . /matrix
