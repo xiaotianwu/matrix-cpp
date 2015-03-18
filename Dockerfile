@@ -5,10 +5,8 @@
 FROM centos
 MAINTAINER Xiaotian Wu
 
-RUN yum install -y wget, tar, vim
+RUN yum install -y git, wget, tar, vim
 RUN rpm -Uvh http://repos.mesosphere.io/el/7/noarch/RPMS/mesosphere-el-repo-7-1.noarch.rpm
-RUN yum install -y mesos
-RUN yum install -y automake, autoconf, m4, libtool
-RUN yum install -y git
+RUN yum install -y automake, autoconf, m4, libtool, make
 
 ADD . /matrix
