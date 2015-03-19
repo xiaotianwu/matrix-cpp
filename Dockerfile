@@ -21,5 +21,5 @@ RUN mkdir -p /mesos-0.21.1/build&&cd /mesos-0.21.1/build&&../configure --disable
 RUN cd /mesos-0.21.1/build&&make install
 RUN cd /mesos-0.21.1/build/3rdparty/libprocess/3rdparty/protobuf-2.5.0&&make&&make install
 
-echo /usr/loca/lib >> /etc/ld.so.conf&&ldconfig
+RUN echo /usr/loca/lib >> /etc/ld.so.conf&&ldconfig
 ADD . /matrix
