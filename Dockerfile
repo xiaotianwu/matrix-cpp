@@ -12,5 +12,5 @@ baseurl=http://opensource.wandisco.com/centos/7/svn-1.9/RPMS/x86_64/\n\
 enabled=1\n\
 gpgcheck=0" > /etc/yum.repos.d/wandisco-svn.repo
 RUN yum groupinstall -y "Development Tools"
-RUN yum install -y python-devel java-1.7.0-openjdk-devel zlib-devel libcurl-devel openssl-devel cyrus-sasl-devel cyrus-sasl-md5 apr-devel subversion-devel apr-utils-devel
+RUN yum install -y python-devel zlib-devel libcurl-devel openssl-devel cyrus-sasl-devel cyrus-sasl-md5 apr-devel subversion-devel apr-utils-devel
 ADD . /matrix
