@@ -22,5 +22,6 @@ RUN cd /mesos-0.21.1/build&&make install
 RUN cd /mesos-0.21.1/build/3rdparty/libprocess/3rdparty/protobuf-2.5.0&&make&&make install
 RUN cd /mesos-0.21.1/build/3rdparty/libprocess/3rdparty/glog-0.3.3&&make install
 RUN echo /usr/local/lib >> /etc/ld.so.conf&&ldconfig
+RUN cp /mesos-0.21.1/build/3rdparty/libprocess/3rdparty/picojson-*/picojson.h /usr/local/include/
 
 ADD . /matrix
