@@ -68,6 +68,7 @@ public:
                               const vector<Offer>& offers)
   {
     foreach (const Offer& offer, offers) {
+      cout << "received offer " << offer.id().value() << endl;
       //cout << "Received offer " << offer.id() << " with " << offer.resources()
       //     << endl;
     }
@@ -117,14 +118,13 @@ int main(int argc, char** argv)
   FrameworkInfo framework;
   framework.set_user(""); // Have Mesos fill in the current user.
   framework.set_name("Test Framework (C++)");
-  framework.set_role("xiaotian");
 
   TestScheduler scheduler(true, executor, "xiaotian");
 
   MesosSchedulerDriver*  driver = new MesosSchedulerDriver(
         &scheduler,
         framework,
-        "180.97.185.35:5050");
+        "223.202.46.132:5050");
 
   int status = driver->run() == DRIVER_STOPPED ? 0 : 1;
 
