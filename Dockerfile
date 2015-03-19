@@ -18,4 +18,6 @@ RUN wget http://www.apache.org/dist/mesos/0.21.1/mesos-0.21.1.tar.gz
 RUN tar -zxf mesos-0.21.1.tar.gz
 RUN mkdir -p /mesos-0.21.1/build&&cd /mesos-0.21.1/build&&../configure --disable-java --disable-python&&make
 
+RUN cd /mesos-0.21.1/build&&make install
+RUN cd /mesos-0.21.1/build/3rdparty/libprocess/3rdparty/protobuf-2.5.0&&make&&make install
 ADD . /matrix
