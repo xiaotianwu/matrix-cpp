@@ -6,8 +6,7 @@ FROM centos
 MAINTAINER Xiaotian Wu
 
 RUN yum install -y git wget tar vim automake autoconf m4 libtool make gcc gcc-c++
-RUN echo -n "\n\
-[WandiscoSVN]\n\
+RUN echo -n "[WandiscoSVN]\n\
 name=Wandisco SVN Repo\n\
 baseurl=http://opensource.wandisco.com/centos/7/svn-1.9/RPMS/x86_64/\n\
 enabled=1\n\
